@@ -1,77 +1,333 @@
-<h1>
-    Hola Mundo, mi nombre es: Alejandro Molina
-    <br>
-    Mi correo es: ernesto.molina5517@utc.edu.ec
-</h1>
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mis Datos Personales</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            color: black;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        table {
-            width: 60%;
-            margin: auto;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: black;
-            color: white;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aprende cómo funciona la arquitectura monolítica, sus ventajas, desafíos y diferencias con otras arquitecturas.">
+    <title>Arquitectura Monolítica | Aprende</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio"><i class="bi bi-boxes me-2" aria-hidden="true"></i>Aprende Arquitectura</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#concepto">Concepto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comparacion">Comparación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#glosario">Glosario</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-nav" href="#evaluacion">Evaluación <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <h2>Mis Datos Personales</h2>
+    <main id="contenido">
+        <header class="hero-section" id="inicio">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="eyebrow"><i class="bi bi-mortarboard me-2" aria-hidden="true"></i>Guía interactiva de software</span>
+                        <h1 class="display-3 fw-bold mt-3">Arquitectura <span>Monolítica</span></h1>
+                        <p class="hero-lead">Descubre cómo funciona, cuáles son sus ventajas y qué desafíos presenta.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a class="btn btn-primary btn-lg" href="#concepto">Comenzar a aprender <i class="bi bi-arrow-down ms-2" aria-hidden="true"></i></a>
+                            <a class="btn btn-outline-light btn-lg" href="#evaluacion">Realizar evaluación <i class="bi bi-check2-circle ms-2" aria-hidden="true"></i></a>
+                        </div>
+                        <p class="hero-note mt-4 mb-0"><i class="bi bi-clock me-2" aria-hidden="true"></i>Conceptos claros, ejemplos prácticos y una evaluación de 10 preguntas.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-diagram" role="img" aria-label="Diagrama de una aplicación monolítica: interfaz, lógica de negocio y acceso a datos dentro de una misma unidad">
+                            <div class="diagram-topline"><span class="pulse-dot"></span> APLICACIÓN ÚNICA <span class="ms-auto">MONOLITO</span></div>
+                            <div class="diagram-user"><i class="bi bi-person-circle" aria-hidden="true"></i><span>Usuario</span></div>
+                            <div class="diagram-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                            <div class="monolith-box">
+                                <span class="diagram-label">UNA SOLA APLICACIÓN</span>
+                                <div class="diagram-module"><i class="bi bi-window" aria-hidden="true"></i> Interfaz</div>
+                                <div class="diagram-module"><i class="bi bi-gear" aria-hidden="true"></i> Lógica de negocio</div>
+                                <div class="diagram-module"><i class="bi bi-database" aria-hidden="true"></i> Acceso a datos</div>
+                                <div class="diagram-connectors" aria-hidden="true"><span></span><span></span></div>
+                            </div>
+                            <div class="diagram-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                            <div class="diagram-database"><i class="bi bi-hdd-stack" aria-hidden="true"></i> Datos</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="scroll-cue" href="#concepto" aria-label="Desplazarse a la definición"><i class="bi bi-chevron-double-down" aria-hidden="true"></i></a>
+            </div>
+        </header>
 
-    <table>
-        <tr>
-            <th>Campo</th>
-            <th>Información</th>
-        </tr>
-        <tr>
-            <td>Apellido</td>
-            <td>Molina Duque</td>
-        </tr>
-        <tr>
-            <td>Nombre</td>
-            <td>Ernesto Alejandro</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>ernesto.molina5517@utc.edu.ec</td>
-        </tr>
-        <tr>
-            <td>Dirección</td>
-            <td>Latacunga</td>
-        </tr>
-        <tr>
-            <td>Acerca de mí</td>
-            <td>Tengo 22 años de edad. Soy de la ciudad de Latacunga, hice mis estudios en la Unidad Educativa Fiscomisional La Inmaculada</td>
-        </tr>
-    </table>
+        <section class="section-padding" id="concepto">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow eyebrow-light">01 · CONCEPTO</span>
+                    <h2>¿Qué es una arquitectura monolítica?</h2>
+                    <p>Una forma directa de construir y entregar una aplicación como una unidad.</p>
+                </div>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <article class="content-card h-100">
+                            <div class="icon-badge"><i class="bi bi-box-seam" aria-hidden="true"></i></div>
+                            <h3>Un sistema integrado</h3>
+                            <p>En una arquitectura monolítica, las funciones principales de un sistema se organizan dentro de una misma aplicación. La interfaz, las reglas del negocio y el acceso a los datos pueden estar separados en módulos, pero forman parte de un solo proyecto ejecutable.</p>
+                            <p class="mb-0">Por lo general, la aplicación se construye, prueba y despliega como una unidad. Esto no significa que todo el código deba estar mezclado: una buena separación interna sigue siendo importante.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-5">
+                        <aside class="fact-card h-100">
+                            <span class="fact-number"><i class="bi bi-lightbulb" aria-hidden="true"></i> IDEA CLAVE</span>
+                            <p>“Monolítica” describe principalmente cómo se empaqueta y despliega el sistema, no necesariamente cómo se organiza cada archivo.</p>
+                            <div class="fact-footer"><i class="bi bi-check2-circle" aria-hidden="true"></i> Una unidad desplegable, varios módulos internos</div>
+                        </aside>
+                    </div>
+                </div>
+                <div class="flow-panel mt-4">
+                    <div class="flow-title"><span class="eyebrow eyebrow-light">02 · RECORRIDO DE UNA SOLICITUD</span><h3>¿Cómo funciona?</h3></div>
+                    <div class="row g-3 flow-steps">
+                        <div class="col-6 col-lg"><div class="flow-step"><span>01</span><i class="bi bi-person" aria-hidden="true"></i><strong>Petición</strong><small>El usuario solicita una acción.</small></div></div>
+                        <div class="col-6 col-lg"><div class="flow-step"><span>02</span><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i><strong>Recepción</strong><small>La aplicación recibe la solicitud.</small></div></div>
+                        <div class="col-6 col-lg"><div class="flow-step"><span>03</span><i class="bi bi-cpu" aria-hidden="true"></i><strong>Lógica</strong><small>Se ejecutan las reglas necesarias.</small></div></div>
+                        <div class="col-6 col-lg"><div class="flow-step"><span>04</span><i class="bi bi-database-check" aria-hidden="true"></i><strong>Datos</strong><small>Se consultan o actualizan si hace falta.</small></div></div>
+                        <div class="col-12 col-lg"><div class="flow-step"><span>05</span><i class="bi bi-reply" aria-hidden="true"></i><strong>Respuesta</strong><small>La aplicación devuelve el resultado.</small></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="section-padding section-tint" id="caracteristicas">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow eyebrow-light">03 · ESTRUCTURA</span>
+                    <h2>Características principales</h2>
+                    <p>La experiencia de trabajar con un monolito depende de cómo se diseñen sus límites internos.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg"><article class="feature-card"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i><h3>Unidad de despliegue</h3><p>La aplicación suele publicarse como un solo artefacto.</p></article></div>
+                    <div class="col-sm-6 col-lg"><article class="feature-card"><i class="bi bi-puzzle" aria-hidden="true"></i><h3>Componentes integrados</h3><p>Sus módulos forman parte del mismo sistema.</p></article></div>
+                    <div class="col-sm-6 col-lg"><article class="feature-card"><i class="bi bi-arrow-left-right" aria-hidden="true"></i><h3>Comunicación interna</h3><p>Los módulos pueden comunicarse mediante llamadas directas.</p></article></div>
+                    <div class="col-sm-6 col-lg"><article class="feature-card"><i class="bi bi-sliders" aria-hidden="true"></i><h3>Administración centralizada</h3><p>La configuración y operación se gestionan en conjunto.</p></article></div>
+                    <div class="col-sm-6 col-lg"><article class="feature-card"><i class="bi bi-clipboard2-check" aria-hidden="true"></i><h3>Pruebas y mantenimiento</h3><p>Se puede validar el sistema completo y también sus módulos.</p></article></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="balance">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow eyebrow-light">04 · BALANCE</span>
+                    <h2>Ventajas y desafíos</h2>
+                    <p>No existe una arquitectura ideal para todos los proyectos: el contexto importa.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6"><article class="balance-card advantages h-100">
+                        <h3><i class="bi bi-plus-circle me-2" aria-hidden="true"></i>Ventajas</h3>
+                        <ul class="check-list">
+                            <li>Simplicidad inicial para construir y entender.</li>
+                            <li>Despliegue centralizado en una sola unidad.</li>
+                            <li>Depuración sencilla en proyectos pequeños.</li>
+                            <li>Comunicación interna directa entre módulos.</li>
+                            <li>Menor complejidad operativa al comenzar.</li>
+                        </ul>
+                    </article></div>
+                    <div class="col-lg-6"><article class="balance-card challenges h-100">
+                        <h3><i class="bi bi-exclamation-circle me-2" aria-hidden="true"></i>Desafíos</h3>
+                        <ul class="check-list">
+                            <li>El mantenimiento puede complicarse al crecer.</li>
+                            <li>Los módulos pueden acumular dependencias fuertes.</li>
+                            <li>Es difícil escalar un componente por separado.</li>
+                            <li>Algunos fallos pueden afectar a una parte amplia del sistema.</li>
+                            <li>Un cambio puede requerir publicar la aplicación completa.</li>
+                        </ul>
+                    </article></div>
+                </div>
+                <p class="context-note mt-3"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Estos efectos dependen de la implementación, la calidad de los límites entre módulos y las necesidades reales del sistema.</p>
+            </div>
+        </section>
+
+        <section class="section-padding section-tint" id="caso">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <span class="eyebrow eyebrow-light">05 · CASO PRÁCTICO</span>
+                        <h2 class="section-title">Una tienda virtual en un solo sistema</h2>
+                        <p class="section-copy">Una aplicación monolítica de comercio electrónico podría reunir usuarios, productos, carrito, pedidos, pagos e inventario como módulos de una misma aplicación.</p>
+                        <p class="section-copy">Al inicio, compartir modelos y coordinar operaciones puede resultar práctico. Con más tráfico y funcionalidades, los cambios en un módulo pueden afectar a otros, el despliegue incluye el conjunto y escalar solo pagos o inventario puede resultar menos directo.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="store-map" role="img" aria-label="Módulos de usuarios, productos, carrito, pedidos, pagos e inventario contenidos dentro de una tienda monolítica">
+                            <div class="store-map-header"><i class="bi bi-shop me-2" aria-hidden="true"></i>Tienda virtual <span>Aplicación única</span></div>
+                            <div class="store-modules">
+                                <div><i class="bi bi-people" aria-hidden="true"></i>Usuarios</div><div><i class="bi bi-tag" aria-hidden="true"></i>Productos</div>
+                                <div><i class="bi bi-cart3" aria-hidden="true"></i>Carrito</div><div><i class="bi bi-receipt" aria-hidden="true"></i>Pedidos</div>
+                                <div><i class="bi bi-credit-card" aria-hidden="true"></i>Pagos</div><div><i class="bi bi-boxes" aria-hidden="true"></i>Inventario</div>
+                            </div>
+                            <div class="store-map-footer"><i class="bi bi-arrow-down-up me-2" aria-hidden="true"></i>Módulos conectados dentro del mismo despliegue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="comparacion">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow eyebrow-light">06 · COMPARACIÓN</span>
+                    <h2>Monolito, microservicios y SOA</h2>
+                    <p>Una vista general: cada enfoque puede tomar formas distintas en la práctica.</p>
+                </div>
+                <div class="table-responsive comparison-wrap">
+                    <table class="table comparison-table align-middle mb-0">
+                        <caption class="visually-hidden">Comparación de arquitecturas monolítica, microservicios y orientada a servicios</caption>
+                        <thead><tr><th scope="col">Aspecto</th><th scope="col">Monolítica</th><th scope="col">Microservicios</th><th scope="col">SOA</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Estructura</th><td>Módulos dentro de una aplicación</td><td>Servicios pequeños y autónomos</td><td>Servicios reutilizables que coordinan procesos</td></tr>
+                            <tr><th scope="row">Despliegue</th><td>Habitualmente conjunto</td><td>Independiente por servicio</td><td>Por servicio; puede coordinarse centralmente</td></tr>
+                            <tr><th scope="row">Escalabilidad</th><td>Se escala la aplicación como conjunto</td><td>Se pueden escalar servicios individuales</td><td>Se escala según las necesidades de cada servicio</td></tr>
+                            <tr><th scope="row">Complejidad operativa</th><td>Baja al inicio</td><td>Alta: red, observabilidad y coordinación</td><td>Media o alta según integración y gobierno</td></tr>
+                            <tr><th scope="row">Escenarios de uso</th><td>Productos pequeños o equipos compactos</td><td>Sistemas grandes con dominios y equipos autónomos</td><td>Integración de servicios entre sistemas empresariales</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row g-4 mt-2 architecture-gallery">
+                    <div class="col-lg-6">
+                        <figure class="architecture-figure h-100">
+                            <img src="assets/img/arquitectura-monolitica.svg" alt="Diagrama monolítico con una aplicación que integra interfaz, lógica de negocio y acceso a datos" loading="lazy" width="800" height="460">
+                            <figcaption><strong>Monolito:</strong> los módulos forman parte de una misma aplicación y suelen desplegarse juntos.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure class="architecture-figure h-100">
+                            <img src="assets/img/arquitectura-microservicios.svg" alt="Diagrama de microservicios con servicios independientes de usuarios, catálogo y pedidos" loading="lazy" width="800" height="460">
+                            <figcaption><strong>Microservicios:</strong> servicios independientes se comunican por red y pueden desplegarse por separado.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding video-section section-tint" id="video">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <span class="eyebrow eyebrow-light">07 · CONTENIDO ADICIONAL</span>
+                        <h2 class="section-title">Mira el video</h2>
+                        <p class="section-copy">Reproduce aquí el video complementario sobre arquitectura monolítica.</p>
+                        <div class="video-hint"><i class="bi bi-play-circle" aria-hidden="true"></i><span>Usa los controles del reproductor para iniciar el video.</span></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="video-frame">
+                            <video controls preload="metadata" aria-label="Video complementario sobre arquitectura monolítica">
+                                <source src="video/tick%20tocks12.mp4" type="video/mp4">
+                                Tu navegador no admite la reproducción de video MP4. Puedes consultar el contenido educativo de esta página.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding quiz-section" id="evaluacion">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow eyebrow-light">08 · PON A PRUEBA LO APRENDIDO</span>
+                    <h2>Evaluación interactiva</h2>
+                    <p>Responde las 10 preguntas y recibe una explicación para cada respuesta.</p>
+                </div>
+                <div class="quiz-card" id="quiz">
+                    <div id="quiz-content" aria-live="polite">
+                        <div class="quiz-meta"><span id="question-counter">Pregunta 1 de 10</span><span id="progress-label">10% completado</span></div>
+                        <div class="progress quiz-progress" role="progressbar" aria-label="Progreso de la evaluación" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10"><div class="progress-bar" id="progress-bar" style="width: 10%"></div></div>
+                        <div id="quiz-message" class="quiz-message" aria-live="assertive"></div>
+                        <form id="quiz-form">
+                            <fieldset class="question-fieldset">
+                                <legend id="question-text" tabindex="-1">Cargando pregunta…</legend>
+                                <div id="answer-options" class="answer-options"></div>
+                            </fieldset>
+                        </form>
+                        <div class="quiz-actions">
+                            <button type="button" class="btn btn-outline-secondary" id="previous-question"><i class="bi bi-arrow-left me-2" aria-hidden="true"></i>Anterior</button>
+                            <div class="d-flex gap-2 flex-wrap justify-content-end">
+                                <button type="button" class="btn btn-primary" id="next-question">Siguiente<i class="bi bi-arrow-right ms-2" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-success" id="finish-quiz">Finalizar evaluación<i class="bi bi-check2 ms-2" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="quiz-results" hidden tabindex="-1" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="glosario">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow eyebrow-light">09 · CONCEPTOS CLAVE</span>
+                    <h2>Glosario</h2>
+                    <p>Definiciones breves para repasar los términos principales.</p>
+                </div>
+                <div class="row g-3 glossary-grid">
+                    <div class="col-md-6"><details class="glossary-item"><summary>Monolito <i class="bi bi-plus-lg" aria-hidden="true"></i></summary><p>Aplicación organizada y desplegada como una sola unidad, aunque internamente tenga varios módulos.</p></details></div>
+                    <div class="col-md-6"><details class="glossary-item"><summary>Módulo <i class="bi bi-plus-lg" aria-hidden="true"></i></summary><p>Parte del sistema que agrupa responsabilidades relacionadas, como gestionar pedidos o usuarios.</p></details></div>
+                    <div class="col-md-6"><details class="glossary-item"><summary>Despliegue <i class="bi bi-plus-lg" aria-hidden="true"></i></summary><p>Proceso de publicar una versión del software en un entorno donde puede utilizarse.</p></details></div>
+                    <div class="col-md-6"><details class="glossary-item"><summary>Escalabilidad <i class="bi bi-plus-lg" aria-hidden="true"></i></summary><p>Capacidad de un sistema para atender más carga mediante recursos adicionales o cambios de diseño.</p></details></div>
+                    <div class="col-md-6"><details class="glossary-item"><summary>Acoplamiento <i class="bi bi-plus-lg" aria-hidden="true"></i></summary><p>Grado de dependencia entre componentes; un acoplamiento alto hace más difícil cambiar uno sin afectar a otros.</p></details></div>
+                    <div class="col-md-6"><details class="glossary-item"><summary>Microservicios <i class="bi bi-plus-lg" aria-hidden="true"></i></summary><p>Estilo que organiza una aplicación en servicios pequeños que pueden desarrollarse y desplegarse de forma independiente.</p></details></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion-section" id="conclusion">
+            <div class="container text-center">
+                <span class="eyebrow">10 · PARA RECORDAR</span>
+                <h2>La arquitectura adecuada depende del problema</h2>
+                <p>Un monolito puede ser una opción válida, sencilla y eficaz cuando se adapta a los requisitos del proyecto. Una buena modularidad ayuda a mantenerlo y permite evolucionar la solución cuando las necesidades cambian.</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+                    <a href="#inicio" class="btn btn-light btn-lg"><i class="bi bi-house me-2" aria-hidden="true"></i>Regresar al inicio</a>
+                    <button type="button" class="btn btn-outline-light btn-lg" id="repeat-quiz"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Repetir evaluación</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding profile-section" id="mis-datos">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow eyebrow-light">SOBRE EL AUTOR</span>
+                    <h2>Mis datos personales</h2>
+                    <p>Se conserva la información personal que ya estaba en la página original.</p>
+                </div>
+                <div class="profile-card">
+                    <h3>Hola Mundo, mi nombre es Alejandro Molina</h3>
+                    <div class="table-responsive">
+                        <table class="table profile-table mb-0">
+                            <tbody>
+                                <tr><th scope="row">Apellido</th><td>Molina Duque</td></tr>
+                                <tr><th scope="row">Nombre</th><td>Ernesto Alejandro</td></tr>
+                                <tr><th scope="row">Email</th><td><a href="mailto:ernesto.molina5517@utc.edu.ec">ernesto.molina5517@utc.edu.ec</a></td></tr>
+                                <tr><th scope="row">Dirección</th><td>Latacunga</td></tr>
+                                <tr><th scope="row">Acerca de mí</th><td>Tengo 22 años de edad. Soy de la ciudad de Latacunga, hice mis estudios en la Unidad Educativa Fiscomisional La Inmaculada.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+            <div><strong>Aprende Arquitectura Monolítica</strong><p class="mb-0">Un recurso educativo para comprender los fundamentos de esta arquitectura.</p></div>
+            <span>© <span id="current-year"></span> · Hecho para aprender</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-<!-- version 1-->

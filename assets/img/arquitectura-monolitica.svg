@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" role="img" aria-labelledby="title desc">
+  <title id="title">Diagrama de arquitectura monolítica</title>
+  <desc id="desc">Usuario y navegador se conectan a una aplicación única que contiene interfaz, lógica de negocio y acceso a datos, y esta consulta una base de datos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3ff"/>
+      <stop offset="1" stop-color="#f9fbff"/>
+    </linearGradient>
+    <linearGradient id="app" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172b57"/>
+      <stop offset="1" stop-color="#244889"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#19315f" flood-opacity=".13"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#5278ce"/>
+    </marker>
+  </defs>
+  <rect width="800" height="460" rx="28" fill="url(#bg)"/>
+  <circle cx="730" cy="75" r="90" fill="#dfe8ff" opacity=".65"/>
+  <circle cx="75" cy="390" r="105" fill="#e5edff" opacity=".7"/>
+
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <g filter="url(#shadow)">
+      <rect x="323" y="28" width="154" height="68" rx="17" fill="#fff" stroke="#dce5f6" stroke-width="2"/>
+      <circle cx="365" cy="62" r="17" fill="#e9efff"/>
+      <circle cx="365" cy="57" r="6" fill="#3264d7"/>
+      <path d="M353 73c2-8 22-8 24 0" fill="#3264d7"/>
+      <text x="417" y="68" fill="#17233e" font-size="16" font-weight="700">Usuario</text>
+    </g>
+    <path d="M400 100v34" fill="none" stroke="#5278ce" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="105" y="145" width="590" height="235" rx="24" fill="url(#app)"/>
+      <rect x="130" y="162" width="540" height="34" rx="10" fill="#ffffff" opacity=".1"/>
+      <circle cx="150" cy="179" r="5" fill="#71dfbd"/>
+      <text x="400" y="184" fill="#dce7ff" font-size="13" font-weight="800" letter-spacing="2">UNA SOLA APLICACIÓN · UN DESPLIEGUE</text>
+
+      <rect x="145" y="220" width="150" height="112" rx="15" fill="#fff" opacity=".98"/>
+      <rect x="325" y="220" width="150" height="112" rx="15" fill="#fff" opacity=".98"/>
+      <rect x="505" y="220" width="150" height="112" rx="15" fill="#fff" opacity=".98"/>
+
+      <rect x="192" y="241" width="56" height="38" rx="6" fill="#e9efff" stroke="#8ca8eb" stroke-width="2"/>
+      <path d="M192 251h56M205 263h14M205 270h31" stroke="#4c73ce" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="400" cy="253" r="17" fill="#e9efff"/>
+      <path d="M400 242v22m-9-11h18m-15-8 12 16m0-16-12 16" stroke="#4c73ce" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="580" cy="247" rx="23" ry="9" fill="#e9efff" stroke="#4c73ce" stroke-width="2"/>
+      <path d="M557 247v24c0 12 46 12 46 0v-24M557 259c0 12 46 12 46 0" fill="none" stroke="#4c73ce" stroke-width="2"/>
+
+      <text x="220" y="303" fill="#17233e" font-size="15" font-weight="700">Interfaz</text>
+      <text x="400" y="303" fill="#17233e" font-size="15" font-weight="700">Lógica de negocio</text>
+      <text x="580" y="303" fill="#17233e" font-size="15" font-weight="700">Acceso a datos</text>
+    </g>
+
+    <path d="M400 383v29" fill="none" stroke="#5278ce" stroke-width="3" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="303" y="418" width="194" height="34" rx="12" fill="#fff" stroke="#dce5f6" stroke-width="2"/>
+      <ellipse cx="335" cy="429" rx="9" ry="4" fill="#7191df"/>
+      <path d="M326 429v11c0 5 18 5 18 0v-11m-18 5c0 5 18 5 18 0" fill="none" stroke="#5278ce" stroke-width="1.5"/>
+      <text x="412" y="441" fill="#17233e" font-size="13" font-weight="700">Base de datos</text>
+    </g>
+  </g>
+</svg>
