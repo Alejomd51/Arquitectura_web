@@ -22,7 +22,7 @@ Sitio educativo estático para conocer la arquitectura monolítica mediante expl
 │   │   ├── arquitectura-monolitica.svg
 │   │   └── arquitectura-microservicios.svg
 ├── video/
-│   └── video.mp4
+│   └── video1.mp4
 └── README.md
 ```
 
@@ -38,7 +38,7 @@ Abre la pestaña **Ports** de Codespaces y selecciona el puerto `8000` para abri
 
 ## Video complementario
 
-El video está en `video/video.mp4` y se reproduce en la sección **Video**, accesible desde el menú superior. Para cambiarlo, reemplaza ese archivo manteniendo el mismo nombre o actualiza la ruta del elemento `<source>` en `index.html`.
+El video está en `video/video1.mp4` y se reproduce en la sección **Video**, accesible desde el menú superior. Para cambiarlo, reemplaza ese archivo manteniendo el mismo nombre o actualiza la ruta del elemento `<source>` en `index.html`.
 
 ## Imágenes
 
